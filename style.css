@@ -1,0 +1,67 @@
+:root {
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --title-color: hsl(120, 92%, 33%);
+    --first-color: hsl(56, 99%, 50%);   
+    --text-color: hsl(57, 97%, 23%);
+    --body-color: hsl(119, 96%, 10%);
+    --container-color: #fff;
+  }
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: var(--body-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--first-color);
+}
+
+h1{
+    color: var(--text-color);
+}
+
+h2{
+    padding: 20px;
+}
+
+
+p{
+    color: var(--first-color);
+    text-align: justify;
+}
+
+
+.sidebar__{    
+    background: var(--title-color);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+.sidebar__ a {
+    color: var();
+}
+
+.div1 {
+    color: var(--first-color);
+    padding: 10px;
+    color: #ffffff;
+}
+.div2 {
+    padding: 10px;
+    color: #ffffff;
+}
+.div3 {
+    padding: 10px;
+    color: #ffffff;
+}
