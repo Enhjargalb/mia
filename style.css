@@ -1,10 +1,10 @@
 :root {
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
-    --title-color: hsl(120, 92%, 33%);
-    --first-color: hsl(56, 99%, 50%);   
-    --text-color: hsl(57, 97%, 23%);
-    --body-color: hsl(119, 96%, 10%);
+    --title-color: rgb(210, 228, 241);
+    --first-color: rgb(143, 172, 192);   
+    --text-color: rgb(129, 141, 151);
+    --body-color: rgb(72, 77, 81);
     --container-color: #fff;
   }
 
@@ -50,6 +50,10 @@ p{
 
 .sidebar__ a {
     color: var();
+}
+
+.section{
+    display: grid;
 }
 
 .div1 {
