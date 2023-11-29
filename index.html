@@ -9,12 +9,35 @@
 </head>
 <body>
 
-    <header class="header__">
+<!-- --Header-- -->
+
+    <header>
         
         <a href="#" class="logo_">
             <i class='bx bxs-heart'></i>
-            <span>Mia</span>
+            <h4>Mia</h4>
         </a>
+
+        <div class="headermenu">
+            <li>
+                <a href="#">
+                    <i class='bx bx-home-alt-2'></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-book-heart'></i>
+                    <span>Book</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cloud'></i>
+                    <span>Manga</span>
+                </a>
+            </li>
+        </div>
 
         
         <div class="toggle__switch">
@@ -28,19 +51,147 @@
 
     </header>
 
+<!-- --Body-- -->
+
     <div class="body__">
+
+        <!-- --Sidebar-- -->
+
         <nav class="sidebar__ close">
-            
-         
-           
+
             <i class='bx bx-chevron-right toggle'></i>
+
+            <div class="icontext">
+                <i class='bx bx-music'></i>
+                <span class="closetext">Playlist</span>
+            </div>
+            <div class="menusong">
+                
+                <li class="songitem">
+                    <img class="PlaylistPlay" id="1">
+                    <h5 class="closeh5">
+                        <div class="subtitle"></div>
+                    </h5>
+                </li>
+                
+                <li class="songitem">
+                    <img class="PlaylistPlay" id="2">
+                    <h5 class="closeh5">
+                        <div class="subtitle"></div>
+                    </h5>
+                </li>
+
+                <li class="songitem">
+                    <img class="PlaylistPlay" id="3">
+                    <h5 class="closeh5">
+                        <div class="subtitle"></div>
+                    </h5>
+                </li>
+                
+                <li class="songitem">
+                    <img class="PlaylistPlay" id="4">
+                    <h5 class="closeh5">
+                        <div class="subtitle"></div>
+                    </h5>
+                </li>
+                
+                <li class="songitem">
+                    <img class="PlaylistPlay" id="5">
+                    <h5 class="closeh5">
+                        <div class="subtitle"></div>
+                    </h5>
+                </li>
+                
+                <li class="songitem">
+                    <img class="PlaylistPlay" id="6">
+                    <h5 class="closeh5">
+                        <div class="subtitle"></div>
+                    </h5>
+                </li>
+                
+                <li class="songitem">
+                    <img class="PlaylistPlay" id="7">
+                    <h5 class="closeh5">
+                        <div class="subtitle"></div>
+                    </h5>
+                </li>
+                
+                <li class="songitem">
+                    <img class="PlaylistPlay" id="8">
+                    <h5 class="closeh5">
+                        <div class="subtitle"></div>
+                    </h5>
+                </li>
+                
+                <li class="songitem">
+                    <img class="PlaylistPlay" id="9">
+                    <h5 class="closeh5">
+                        <div class="subtitle"></div>
+                    </h5>
+                </li>
+                
+
+               
+            </div>
+
         </nav>
 
-        <section class="section__">
-            <h1>body</h1>
-        </section>  
+        <!-- --Section-- -->
+
+        <section class="section__ close">
+            <div class="wrapper">
+                <h2 class="question">Би чамд таалагддаг уу?</h2>
+                <img class="gif" alt="gif" src="https://media.giphy.com/media/FTGah7Mx3ss04PcasF/giphy.gif"/>
+                <div class="btn-group">
+                    <button class="yes-btn">Yes</button>
+                    <button class="no-btn">No</button>
+                </div>
+            </div>
+            
+        </section>
+
+
+        
 
     </div>
+
+    <!-- --footer-- -->
+
+    <footer>
+        <div class="masterplay">
+            <div class="wave">
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+            </div>
+            <div class="cover_">
+                <img src="img/1.jpg" alt="Alan" id="poster_master_play">
+                <h5 id="title" class="closeh5">
+                    Faded <br>
+                    <div class="subtitle">Alan walker</div>
+                </h5>
+            </div>
+           
+            <div class="icon">
+                <i class='bx bx-skip-previous' id="back"></i>
+                <i class='bx bx-play' id="masterPlay"></i>
+                <i class='bx bx-skip-next' id="next"></i>
+            </div>
+            <span id="currentStart">0:00</span>
+            <div class="bar">
+                <input type="range" id="seek" min="0" value="0" max="100">
+                <div class="bar2" id="bar2"></div>
+                <div class="dot"></div>
+            </div>            
+            <span id="currentEnd">0:00</span>
+            <div class="vol">
+                <i class='bx bx-volume-low' id="vol_icon"></i>
+                <input type="range" id="vol" min="0" value="40" max="100">
+                <div class="vol_bar"></div>
+                <div class="dot" id="vol_dot"></div>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 
