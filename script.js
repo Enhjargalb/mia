@@ -293,3 +293,15 @@ next.addEventListener('click', ()=>{
     makeAllbackgrounds();
     Array.from(document.getElementsByClassName('songitem'))[`${index-1}`].style.background = "var(--primary-color)";
 })
+
+
+// --phone--
+
+function toggleP(){
+  let sidebar__ = document.getElementsByClassName("sidebar__");
+  if (sidebar.style.visibility === "visible"){
+      sidebar.style.visibility = "hidden";
+  } else {
+    sidebar.style.visibility = "visible";
+  }
+}
