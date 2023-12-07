@@ -5,8 +5,8 @@
     --primary-color: #695CFE;
     --only: #695CFE;
     --primary-light-color: #F6F5FF;
-    --toggle-color: #b7b7b7;
-    --text-color: #707070;
+    --toggle-color: #101010;
+    --text-color: #303335;
   }
 
 
@@ -25,7 +25,7 @@ body.dark{
     --primary-color: #222221;
     --only: #695CFE;
     --primary-light-color: #3A3B3C;
-    --toggle-color: #FFF;
+    --toggle-color: #707070;
     --text-color: #CCC;
 }
 
@@ -266,6 +266,8 @@ body.dark .sidebar__ .toggle{
     width: calc(100% - 88px);
 }
 
+/* --home-- */
+
 .gif {
     height: 100%;
     width: 100%;
@@ -307,6 +309,291 @@ button:nth-child(2) {
     color: #e94d58;
     z-index: 9999;
 }
+
+/* --book-- */
+
+
+.book{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    transition: transform 1.5s;
+    perspective: 1500px;
+    border-radius: 5px 15px 15px 5px;
+}
+
+.input-nom{
+   display: none;
+}
+
+
+.cover, .back-cover{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 15px 15px 5px;
+    box-shadow: 0 0 3px var(--toggle-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center left;
+}
+
+.cover{
+    background: url(book-img/1/cover.jpg);
+    background-size: cover;
+    position: absolute;
+    z-index: 12;
+    transition: transform 1.5s;
+}
+
+.cover label{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.back-cover{
+    background: url(book-img/1/back-cover.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+    transition: transform 1.5s, z-index 0s 1.5s;
+    transition-duration: 1.5s;
+}
+
+.back-cover label{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.page{
+    position: absolute;
+    width: 390px;
+    height: 490px;
+    background: white;
+    border-radius: 5px 15px 15px 5px;
+    margin-top: 5px ;
+    transform-origin: left;
+    transition: transform 5s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition-duration: 1.5s;
+}
+
+.page img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 5px 5px 15px;
+    transform-origin: left;
+    transition: transform 1.5s;
+}
+
+.front-page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.front-page h4{
+    height: 100%;
+    color: #303335;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page1 .front-page p{
+    height: calc(100% - 53px);
+    color: #303335;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+
+}
+
+.front-page p{
+    text-align: justify;
+    height: 100%;
+    color: #303335;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.front-page p1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: 10px;
+}
+
+.front-page label i{
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: var(--only);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-page{
+    transform: rotateY(180deg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    z-index: 12;
+}
+
+.back-page label i{
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: var(--only);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next, .prev{
+    position: absolute;
+    bottom: 1em;
+    cursor: pointer;
+}
+
+.next{
+    right: 1em;
+}
+
+.prev{
+    left: 1em;
+}
+
+#page1{
+    z-index: 10;
+}
+#page2{
+
+    z-index: 9;
+}
+#page3{
+
+    z-index: 8;
+}
+#page4{
+
+    z-index: 7;
+}
+#page5{
+    z-index: 6;
+}
+#page6{
+    transition: transform 1.5s, z-index 0s 1.5s;
+    z-index: 5;
+}
+#page7{
+    transition: transform 1.5s, z-index 0s 1.5s;
+    z-index: 4;
+}
+#page8{
+    transition: transform 1.5s, z-index 0s 1.5s;
+    z-index: 3;
+}
+#page9{
+    transition: transform 1.5s, z-index 0s 1.5s;
+    z-index: 2;
+}
+#page10{
+    transition: transform 1.5s, z-index 0s 1.5s;
+    z-index: 1;
+}
+
+#checkbox-cover:checked ~ .book{
+    transform: translateX(150px);
+}
+
+#checkbox-cover:checked ~ .book .cover{
+    transition: transform 1.5s, z-index 0.5s 0.5s;
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+
+#checkbox-cover:checked ~ .book .page{
+    box-shadow: 0 0 2px var(--toggle-color);
+}
+
+#checkbox-page1:checked ~ .book #page1{
+    transition: transform 1.5s, z-index 0.5s 0.5s;
+    transform: rotateY(-180deg);
+    z-index: 2;
+}
+
+#checkbox-page2:checked ~ .book #page2{
+    transition: transform 1.5s, z-index 0.5s 0.5s;
+    transform: rotateY(-180deg);
+    z-index: 3;
+}
+#checkbox-page3:checked ~ .book #page3{
+    transition: transform 1.5s, z-index 0.5s 0.5s;
+    transform: rotateY(-180deg);
+    z-index: 4;
+}
+
+#checkbox-page4:checked ~ .book #page4{
+    transition: transform 1.5s, z-index 0.5s 0.5s;
+    transform: rotateY(-180deg);
+    z-index: 5;
+}
+#checkbox-page5:checked ~ .book #page5{
+    transition: transform 1.5s, z-index 0.5s 0.5s;
+    transform: rotateY(-180deg);
+    z-index: 6;
+}
+
+#checkbox-page6:checked ~ .book #page6{
+    transition: transform 1.5s, z-index 0s 0s;
+    transform: rotateY(-180deg);
+    z-index: 7;
+}
+#checkbox-page7:checked ~ .book #page7{
+    transition: transform 1.5s, z-index 0s 0s;
+    transform: rotateY(-180deg);
+    z-index: 8;
+}
+
+#checkbox-page8:checked ~ .book #page8{
+    transition: transform 1.5s, z-index 0s 0s;
+    transform: rotateY(-180deg);
+    z-index: 9;
+}
+#checkbox-page9:checked ~ .book #page9{
+    transition: transform 1.5s, z-index 0s 0s;
+    transform: rotateY(-180deg);
+    z-index: 10;
+}
+#checkbox-page10:checked ~ .book #page10{
+    transition: transform 1.5s, z-index 0s 0s;
+    transform: rotateY(-180deg);
+    z-index: 11;
+}
+
+#checkbox-back-cover:checked ~ .book{
+    transform: translateX(390px);
+}
+
+#checkbox-back-cover:checked ~ .book .back-cover{
+    transition: transform 1.5s, z-index 0s 0s;
+    transform: rotateY(-180deg);
+    z-index: 11;
+}
+
 
 /* <!-- --footer-- --> */
 
@@ -557,13 +844,9 @@ footer{
     .body__ .sidebar__{
         position: absolute;
         width: 88px;
-        transition: all .1s;
+        transition: all .1s linear;
         visibility: hidden;
-    }
-
-    .mobile_menu{
-        margin-top: 0;
-        visibility: visible;
+        z-index: 99999;
     }
 
     .section__.close{
